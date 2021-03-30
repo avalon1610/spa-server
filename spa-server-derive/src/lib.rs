@@ -255,7 +255,7 @@ struct Options {
     identity: Option<Identity>,
 }
 
-#[derive(Default, Debug)]
+#[derive(Default)]
 struct Api {
     path: Vec<Path>,
     prefix: Option<String>,
