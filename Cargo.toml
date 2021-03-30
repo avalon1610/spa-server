@@ -1,0 +1,19 @@
+[package]
+authors = ["raven <avalon1610@gmail.com>"]
+edition = "2018"
+name = "spa-server"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-cors = {path = "patch_cors"}
+actix-files = "0.6.0-beta.2"
+actix-identity = {path = "patch_identity"}
+actix-web = "4.0.0-beta.3"
+include-flate = {version = "0.1", features = ["stable"]}
+log = "0.4"
+rand = "0.8"
+spa-server-derive = {path = "./spa-server-derive"}
+time = "0.2"
+serde = "1.0"
