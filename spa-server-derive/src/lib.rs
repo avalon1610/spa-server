@@ -3,7 +3,6 @@ mod utils;
 
 use embed::impl_embed;
 use proc_macro2::{Span, TokenStream};
-use proc_macro_error::proc_macro_error;
 use quote::quote;
 use syn::{
     parse_macro_input, spanned::Spanned, DeriveInput, Error, FnArg, Meta, NestedMeta, Pat, Path,
@@ -11,7 +10,6 @@ use syn::{
 };
 use utils::{FromLit, LitWrap};
 
-#[proc_macro_error]
 #[proc_macro_derive(SPAServer, attributes(spa_server))]
 pub fn derive_spa_server(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
